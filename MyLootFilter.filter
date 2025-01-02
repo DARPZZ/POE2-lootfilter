@@ -1,0 +1,232 @@
+# DARPZ loot filter
+# Version: 1.3
+
+########################
+# Høj værdi
+########################
+
+# Highlight Exalted Orbs and Divine Orbs
+Show
+    Class "Currency"
+    BaseType "Exalted Orb" "Divine Orb"
+    SetFontSize 45
+    SetTextColor 255 215 0 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 255 215 0 255
+    PlayAlertSound 6 300
+
+# Highlight Chaos Orbs and Regals
+Show
+    Class "Currency"
+    BaseType "Chaos Orb" "Regal Orb"
+    SetFontSize 40
+    SetTextColor 128 0 128 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 128 0 128 255
+    PlayAlertSound 4 300
+
+########################
+# MAPS
+########################
+
+# Highlight Waystone levels (1-15) with color gradient
+Show
+    Class "Waystone"
+    AreaLevel == 1
+    SetFontSize 20
+    SetTextColor 0 0 139 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 2
+    SetFontSize 20
+    SetTextColor 0 0 160 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 3
+    SetFontSize 20
+    SetTextColor 0 0 180 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 4
+    SetFontSize 20
+    SetTextColor 0 0 200 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 5
+    SetFontSize 20
+    SetTextColor 0 0 220 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 6
+    SetFontSize 20
+    SetTextColor 0 0 230 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 7
+    SetFontSize 20
+    SetTextColor 173 216 230 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 8
+    SetFontSize 20
+    SetTextColor 173 216 240 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 9
+    SetFontSize 20
+    SetTextColor 180 225 240 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 10
+    SetFontSize 20
+    SetTextColor 190 235 245 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 11
+    SetFontSize 20
+    SetTextColor 200 240 245 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 12
+    SetFontSize 20
+    SetTextColor 210 245 250 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 13
+    SetFontSize 20
+    SetTextColor 220 250 255 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 14
+    SetFontSize 20
+    SetTextColor 230 250 255 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+Show
+    Class "Waystone"
+    AreaLevel == 15
+    SetFontSize 20
+    SetTextColor 240 250 255 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 0 255 255 255
+    PlayAlertSound 5 300
+
+
+########################
+# UNIQUE ITEMS
+########################
+
+# Highlight all unique items
+Show
+    Rarity Unique
+    SetFontSize 45
+    SetTextColor 51 255 51 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 255 255 255 255
+    PlayAlertSound 6 300
+
+########################
+# TABLETS
+########################
+
+# Highlight Tablets with a pink color
+Show
+    BaseType "Tablet"
+    SetFontSize 45
+    SetTextColor 255 20 147 255  # Pink
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 255 20 147 255
+    PlayAlertSound 7 300
+
+########################	
+# HIDE LOW-VALUE ITEMS
+########################
+
+# Show all Rare items
+Show
+    Rarity Rare
+    SetFontSize 35
+    SetTextColor 255 255 0 255
+    SetBackgroundColor 0 0 0 255
+    SetBorderColor 255 255 0 255
+
+
+###########################
+#Hide armor and weappons"
+###########################
+Hide
+  Class == "Body Armour" "Belt" "Ring" "Boots" "Gloves" "Helmets" "Bows" "Crossbows" "Foci" "One Hand Maces" "Quivers" "Quarterstaves" "Sceptres" "Shields" "Staves" "Two Hand Maces" "Wands"
+  Rarity <= Magic
+
+#########################
+# Hide low-value currency
+#########################
+Hide
+    Class "Currency"
+    BaseType "Scroll of Wisdom" "Portal Scroll"
+
+# Hide all Mana and Health Flasks
+Hide
+    Class "Flask"
+
+# Hide gold under 300
+
+Hide
+	BaseType == "Gold"
+	StackSize < 999
+	SetFontSize 30
+	SetTextColor 235 200 110
